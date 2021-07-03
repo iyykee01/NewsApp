@@ -24,8 +24,8 @@ class NewsListTableViewController: UITableViewController {
         
         Webservice().getArticles { articles in
            
-            guard let articles = articles else {return}
-            self.articleListVM = ArticleListViewModel(articles: articles)
+            guard let articlesList = articles else {return}
+            self.articleListVM = ArticleListViewModel(articles: articlesList)
             
             DispatchQueue.main.async {
                 self.tableView.reloadData(); 

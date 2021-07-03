@@ -24,7 +24,6 @@ class Webservice {
             }
             if let data = data {
                 let articlesList = try? JSONDecoder().decode(ArticleList.self, from: data)
-                print(articlesList?.articles)
                 completion(articlesList?.articles)
             }
         }.resume()
